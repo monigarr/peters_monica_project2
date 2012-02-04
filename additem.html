@@ -15,14 +15,22 @@
 		<meta type="viewport" content="user-scalable=no, width=device-width" />
 		<meta type="description" content="Manage your personal media library" />
 		<meta type="keywords" content = "media library, add media, monica peters, vfw" />
+		<style type="text/css">@import url(style.css);</style>
+		<!--[if lt IE 9]>
+			<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
 	</head>
 	<body>
 		<header>
 			<h1><a href="index.html">Media Library</a></h2>
-			<h2>Add Media</h2>
 		</header>
 		<article>
+				<p>Manage your personal media library.</p>
+			</article>
+				
+		<article>
 			<p>
+				<h2>Add Media</h2>
 				<form action="additem.html" method="post">
 					<fieldset>
 						<legend>Info</legend>
@@ -52,9 +60,7 @@
 								<li><label for="mtopic">Media Topic:</label>  
 									<input type="radio" value="personal" id="personal" name="mtopic" /><label for="personal">Personal</label>
 									<input type="radio" value="school" id="school" name="mtopic" /><label for="school">School</label>
-									<input type="radio" value="work" id="work" name="mtopic" /><label for="work">Work</label>
-									<input type="radio" value="other" id="other" name="mtopic" /><label for="other">Other</label>
-								</li>
+									<input type="radio" value="work" id="work" name="mtopic" /><label for="work">Work</label></li>
 								<li><label for="mtags">Media Tags:</label> <input type="text" id="mtags" /></li>
 								<li><label for="mcomments">Media Comments:</label> <textarea id="comments" /></textarea></li>
 								<input type="submit" value="Add Media" /> 
