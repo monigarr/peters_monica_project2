@@ -31,41 +31,24 @@
 				
 		<article>
 				<h2>Add New Media</h2>
-				<form action="additem.html" method="post">
-					<fieldset>
+				<form action="additem.html" method="post" id="mediaForm">
+					<fieldset id="mediaFieldSet">
 						<legend>MEDIA INFO</legend>
-							<ul>
-								<li>
-									<label for="mtype" id="mtype">Media Type:</label> 
-									<select id="media" />
-										<optgroup label="Traditional">
-											<option value="book">book</option>
-											<option value="document">document</option>
-											<option value="music">music</option>
-											<option value="movie">movie</option>
-										</optgroup>
-										<optgroup label="Digital">
-											<option value="pdf">.pdf</option>
-											<option value="doc">.doc</option>
-										</optgroup>
-										<optgroup label="Recording">
-											<option value="audio">audio</option>
-											<option value="video">video</option>
-										</optgroup>
-									</select>
-								</li>
-								<li><label for="mname">Media Name: </label> <input type="text" id="mname" onfocus="styleMedia();" /></li>
-								<li><label for="mdate">Media Date: </label> <input type="date" id="mdate" placeholder="day/month/year" onfocus="styleField();" /></li>
-								<li><label for="mrating">Media Rating: </label>1<input type="range" min="1" max="10" name="rating" id="mrating" onfocus="styleField();"/>10</li>
-								<li><label for="mtopic">Media Topic:</label>  
+							<ul id="media">
+								<li id="select"><label for="group">Media Type:</label><br /></li>
+								<li id="mname"><label for="mname">Media Name: </label> <input type="text" id="mname" onfocus="styleMedia();" /></li>
+								<li id="mdate"><label for="mdate">Media Date: </label> <input type="date" id="mdate" placeholder="day/month/year" onfocus="styleField();" /></li>
+								<li id="mrating"><label for="mrating">Media Rating: </label>1<input type="range" min="1" max="10" name="rating" id="mrating" onfocus="styleField();"/>10</li>
+								<li id="mtopic"><label for="mtopic">Media Topic:</label>  
 									<input type="radio" value="personal" id="personal" name="mtopic" /><label for="personal">Personal</label>
 									<input type="radio" value="school" id="school" name="mtopic" /><label for="school">School</label>
 									<input type="radio" value="work" id="work" name="mtopic" /><label for="work">Work</label>
 									</li>
-								<li><label for="mtags">Media Tags:</label> <input type="text" id="mtags" onfocus="styleField();" /></li>
-								<li><label for="mcomments">Media Comments:</label> <textarea id="mcomments" onfocus="styleField();" /></textarea></li>
-								<input type="submit" value="Store Media" id="msubmit" onclick="storeMedia();" /> 
-								<input type="submit" value="Clear Stored Media" id="msubmit" onclick="clearLocal(); location.reload();" /> 
+								<li id="mtags"><label for="mtags">Media Tags:</label> <input type="text" id="mtags" onfocus="styleField();" /></li>
+								<li id="mcomments"><label for="mcomments">Media Comments:</label> <textarea id="mcomments" onfocus="styleField();" /></textarea></li>
+								<input type="submit" value="Store Media" id="storeMedia" onclick="storeMedia();" /> 
+								<input type="submit" value="Show All Media" id="showAllMedia" onclid="getAllMedia();" />
+								<input type="submit" value="Clear Stored Media" id="clearStoredMedia" onclick="clearLocal(); location.reload();" /> 
 							</ul>
 					</fieldset>
 				</form>
