@@ -70,6 +70,9 @@ a:hover {
 /*TYPOGRAPHY*/
 
 h1 { 
+	/* Parisienne imported from google fonts http://www.google.com/webfonts */
+	font-family: Parisienne;
+	font-size: 42px;
 	margin: 0px;
 	padding: 5px;
 	border: 1px navy;

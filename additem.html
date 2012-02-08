@@ -16,6 +16,7 @@
 		<meta type="description" content="Manage your personal media library" />
 		<meta type="keywords" content = "media library, add media, monica peters, vfw" />
 		<link rel="stylesheet" href="css/style.css" type="text/css" />
+		<link href='http://fonts.googleapis.com/css?family=Parisienne' rel='stylesheet' type='text/css'>
 		<!--[if lt IE 9]>
 			<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
@@ -26,14 +27,13 @@
 		</header>
 		<article>
 				<p>Manage your personal media library.</p>
-			</article>
+		</article>
 				
 		<article>
-			<p>
-				<h2>Add Media</h2>
+				<h2>Add New Media</h2>
 				<form action="additem.html" method="post">
 					<fieldset>
-						<legend>Info</legend>
+						<legend>MEDIA INFO</legend>
 							<ul>
 								<li>
 									<label for="mtype" id="mtype">Media Type:</label> 
@@ -54,26 +54,26 @@
 										</optgroup>
 									</select>
 								</li>
-								<li><label for="mname">Media Name: </label> <input type="text" id="mname" onfocus="styleField" /></li>
-								<li><label for="mdate">Media Date: </label> <input type="date" id="date" placeholder="day/month/year" onfocus="styleField" /></li>
-								<li><label for="mrating">Media Rating: </label>1<input type="range" min="1" max="10" name="rating" type="range" id="rating" />10</li>
+								<li><label for="mname">Media Name: </label> <input type="text" id="mname" onfocus="styleMedia();" /></li>
+								<li><label for="mdate">Media Date: </label> <input type="date" id="mdate" placeholder="day/month/year" onfocus="styleField();" /></li>
+								<li><label for="mrating">Media Rating: </label>1<input type="range" min="1" max="10" name="rating" id="mrating" onfocus="styleField();"/>10</li>
 								<li><label for="mtopic">Media Topic:</label>  
 									<input type="radio" value="personal" id="personal" name="mtopic" /><label for="personal">Personal</label>
 									<input type="radio" value="school" id="school" name="mtopic" /><label for="school">School</label>
-									<input type="radio" value="work" id="work" name="mtopic" /><label for="work">Work</label></li>
-								<li><label for="mtags">Media Tags:</label> <input type="text" id="mtags" onfocus="styleField" /></li>
-								<li><label for="mcomments">Media Comments:</label> <textarea id="comments" onfocus="styleField" /></textarea></li>
-								<input type="submit" value="Add Media" /> 
-						</ul>
+									<input type="radio" value="work" id="work" name="mtopic" /><label for="work">Work</label>
+									</li>
+								<li><label for="mtags">Media Tags:</label> <input type="text" id="mtags" onfocus="styleField();" /></li>
+								<li><label for="mcomments">Media Comments:</label> <textarea id="mcomments" onfocus="styleField();" /></textarea></li>
+								<input type="submit" value="Store Media" id="msubmit" onclick="storeMedia();" /> 
+								<input type="submit" value="Clear Stored Media" id="msubmit" onclick="clearLocal(); location.reload();" /> 
+							</ul>
 					</fieldset>
 				</form>
-			</p>
 		</article>
 		<section>
 				<nav>
 					<ul id="numlist">
-						<li><a href="additem.html">Add Media</a></li>
-						<li><a href="#">View All Media</a></li>
+						<li><a href="additem.html">Add New Media</a></li>
 					</ul>
 				</nav>
 		</section>
