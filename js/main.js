@@ -43,6 +43,28 @@ window.addEventListener("DOMContentLoaded", function()
 		selectLi.appendChild(makeSelect);
 	}
 	
+	function saveMedia()
+	{
+		//can only store strings. arrays will be converted to strings
+		//localStorage.setItem("test", "hello");
+		//alert(localStorage.key(0));
+		var id = Math.floor(Math.random()*10000001);
+		//Gather up all our form field values and store in object.
+		//Object properties contain array with form label and input value
+		var item 			= {};
+			item.mgroup 	= ["Media Type:",$("mediaGroups").value];
+			item.mname 		= ["Media Name:", $("mname").value];
+			item.mdate  	= ["Date:", $("mdate").value];
+			//range button
+			item.mrating 	= ["Rating:", $("mrating").value];
+			//radio button
+			//item.mtopics 	= ["Topics:", mtopicValue];
+			item.mtags		= ["Tags:", $("mtags").value];
+			item.mcomments	= ["Comments:", $("mcomments").value];
+		//Save Data to Local Storage: Use Stringify to convert our object to a string
+		localStorage.setItem(id, JSON.stringify(item));
+	}
+	
 	// Variable defaults
 	// store values of dropdown in array
 	var mediaGroups = ["-- Choose Media Type--", "book", "document", "music", "movie", "pdf", "doc", "audio", "video"];
@@ -50,12 +72,12 @@ window.addEventListener("DOMContentLoaded", function()
 	
 	// Set Link & Submit Click Events
 	
-	var getAllMedia = $("getAllMedia");
-	getAllMedia.addEventListener("click", getData);
-	var clearStoredMedia = $("clear");
-	clearStoredMedia.addEventListener("click", clearLocal);
-	var storeMedia = $("storeMedia");
-	storeMedia.addEventListener("click", storeData);
+	//var getAllMedia = $("getAllMedia");
+	//getAllMedia.addEventListener("click", getData);
+	//var clearStoredMedia = $("clear");
+	//clearStoredMedia.addEventListener("click", clearLocal);
+	var save = $("submit");
+	save.addEventListener("click", saveMedia);
 	
 });
 
