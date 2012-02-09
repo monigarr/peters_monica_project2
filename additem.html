@@ -9,7 +9,7 @@
     -->
 <html lang="en">
 	<head>
-		<title>Media Library; Add Media</title>
+		<title>Media Library</title>
 		<meta type="charset" content = "utf-8" />
 		<meta type="robots" content="index,follow" />
 		<meta type="viewport" content="user-scalable=no, width=device-width" />
@@ -22,15 +22,18 @@
 		<![endif]-->
 	</head>
 	<body>
-		<header>
-			<h1><a href="index.html">Media Library</a></h2>
-		</header>
+		<header><h1><a href="index.html">Media Library</a></h2></header>
+		<article><p>Manage your personal media library.</p></article>	
 		<article>
-				<p>Manage your personal media library.</p>
-		</article>
-				
-		<article>
-				<h2>Add New Media</h2>
+			<section>
+				<nav>
+					<ul id="numlist">
+						<li><a href="additem.html" id="addNew" style="display:none;">Add New Media</a></li>
+						<li><a href="#" id="displayLink">Show All Media</a></li> 
+						<li><a href="#" id="clear"> Clear Stored Media</a></li>
+					</ul>
+				</nav>
+		</section>
 				<form action="additem.html" method="post" id="mediaForm">
 					<fieldset id="mediaFieldSet">
 						<legend>MEDIA INFO</legend>
@@ -44,23 +47,13 @@
 									<input type="radio" value="school" id="school" name="mtopics" /><label for="school">School</label>
 									<input type="radio" value="work" id="work" name="mtopics" /><label for="work">Work</label>
 									</li>
-								<li id="mtags"><label for="mtags">Media Tags:</label> <input type="text" id="mtags" onfocus="styleField();" /></li>
-								<li id="mcomments"><label for="mcomments">Media Comments:</label> <textarea id="mcomments" onfocus="styleField();" /></textarea></li>
+								<li id="mtags"><label for="mtags">Media Tags:</label> <input type="text" id="mtags" /></li>
+								<li id="mcomments"><label for="mcomments">Media Comments:</label> <textarea id="mcomments" /></textarea></li>
 								<input type="submit" value="Save Media" id="submit" /> <br />
-								<!--<input type="submit" value="Show All Media" id="showAllMedia" onclid="getAllMedia();" />
-								<input type="submit" value="Clear Stored Media" id="clearStoredMedia" onclick="clearLocal(); location.reload();" /> 
-								-->
 							</ul>
 					</fieldset>
 				</form>
 		</article>
-		<section>
-				<nav>
-					<ul id="numlist">
-						<li><a href="additem.html">Add New Media</a></li>
-					</ul>
-				</nav>
-		</section>
 		<footer></footer>
 		<script type="text/javascript" src="js/main.js"></script>
 	</body>

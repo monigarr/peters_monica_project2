@@ -1,19 +1,16 @@
 /*
+Full Sail University
 Monica Peters
 Visual Frameworks
 Week 2 Project 2
-February 3rd 2012
-
-
+February 8TH 2012
 */
+
 
 /* add multiple browser support */
 article, aside, figure, footer, header, hgroup, nav, section {
 	display:block;
 }
-
-html { 
-} 
 
 body { 
 	font-family: Verdana, Arial, Helvetica, san-serif;
@@ -27,29 +24,36 @@ body {
 /*LAYOUT*/
 
 section { 
-
-
+	display: block;
 } 
 
 header { 
-
-
+	display: block;
 } 
 
 nav { 
-
-
+	display: block;
 } 
 
 footer { 
-
-
+	display: block;
 } 
 
 article { 
 
-
 } 
+
+div#items {
+	font-family: san-serif;
+	width: auto;
+	margin: auto;
+	padding: 10px;
+	outline: dashed;
+	color: navy;
+	font-weight: normal;
+	line-height: 1.2em;
+	text-transform: lowercase;
+}
 
 
 /*LINKS*/
@@ -146,11 +150,6 @@ label {
 	/*border: 1px solid blue;*/
 } 
 
-#mtype { 
-
-
-} 
-
 input[type=submit] { 
 	color: #ffffff;
 	background-color: orange;
@@ -158,81 +157,13 @@ input[type=submit] {
 	border-radius: 35%;
 } 
 
-#mname { 
-
-
-} 
-
-#date { 
-
-
-} 
-
-#personal { 
-
-
-} 
-
-#school { 
-
-
-} 
-
-#work { 
-
-
-} 
-
-#other { 
-
-
-} 
-
-#mtags { 
-
-
-} 
-
-optgroup { 
-
-
-} 
-
-option { 
-
-
-} 
-
-select { 
-
-
-} 
-
-#media { 
-
-
-} 
-
-textarea { 
-
-
-} 
-
-#comments { 
-
-
-} 
-
 
 /*LISTS*/
 
 ul { 
-
-
 } 
 
 #numlist { 
-
 
 } 
 
